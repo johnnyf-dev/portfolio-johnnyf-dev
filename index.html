@@ -1,0 +1,237 @@
+<!-- Fluxograma da lógica do arquivo index.html
+------------------------------------------
+INÍCIO
+  |
+  |-> <head>
+  |       |-> Configurações de SEO (meta tags, título, favicon)
+  |       |-> Importação de CSS e JS
+  |
+  |-> <body>
+          |
+          |-> <canvas> (efeito Matrix no fundo)
+          |
+          |-> <header> (menu fixo no topo + título)
+          |
+          |-> <main>
+          |       |-> <section id="portfolio"> (carrossel de destaques com imagens)
+          |       |-> <section id="apresentacao"> (foto + descrição pessoal)
+          |       |-> <section id="depoimentos"> (carrossel infinito de depoimentos)
+          |       |-> <section id="contato"> (formulário com autocomplete + botão WhatsApp fixo)
+          |
+          |-> <footer> (rodapé com assinatura)
+  |
+FIM -->
+
+
+
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR"> <!-- Define idioma da página para português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o padrão de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade mobile-first -->
+    <meta name="description" content="Portfólio de Johnny - Desenvolvedor Front-End em formação Full Stack.">
+    <!-- SEO: descrição -->
+    <meta name="keywords" content="Johnny, desenvolvedor, portfólio, sites, programação, front-end, full stack">
+    <!-- SEO: palavras-chave -->
+    <meta name="author" content="Johnny"> <!-- SEO: autor -->
+    <meta property="og:title" content="Portfólio Johnny"> <!-- Open Graph para redes sociais -->
+    <meta property="og:description"
+        content="Conheça os projetos de Johnny, desenvolvedor front-end em formação full stack.">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://media.licdn.com/dms/image/v2/C5603AQElPv6UXr4Cxg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613347006780?e=1777507200&v=beta&t=CIhqOoMMDIP0Occ7v-2Sl0qdkZFqIC6GfaawWEw9aOI">
+    <!-- Imagem de preview -->
+    <title>Portfólio Johnny</title> <!-- Título da aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Importa o CSS -->
+</head>
+
+<body>
+    <!-- Canvas para efeito Matrix -->
+    <canvas id="matrix"></canvas>
+    <!-- Cabeçalho com nome e navegação -->
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#apresentacao">Sobre mim</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <h2>Imagine seu sonho <p>se tornando realidade!!</p></h2>
+        <!-- Seção de portfólio -->
+        <section id="portfolio">
+            <section id="portfolio">
+                <!--  <h2>Portfólio</h2> -->
+
+                <section id="destaques">
+                    <h2>Destaques</h2>
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.pixabay.com/photo/2015/07/07/11/36/haircut-834280_1280.jpg"
+                                    alt="Salão de Beleza">
+                                <p>Salão de Beleza</p>
+                            </a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.pixabay.com/photo/2021/12/17/19/15/grooming-6877255_1280.jpg"
+                                    alt="Pet-Shop">
+                                <p>Pet-Shop</p>
+                            </a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.pixabay.com/photo/2017/10/19/23/28/fashion-2869643_1280.jpg"
+                                    alt="Loja de Roupa">
+                                <p>Loja de Roupa</p>
+                            </a>
+                            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.pixabay.com/photo/2017/08/10/05/25/macbook-2618561_1280.jpg"
+                                    alt="Loja de Eletrônicos">
+                                <p>Loja de Eletrônicos</p>
+                            </a>
+                            <!--           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/imagens-projetos/academia.jpg" alt="Academia">
+                    <p>Academia</p>
+                </a>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/imagens-projetos/blog.jpg" alt="Blog">
+                    <p>Blog</p>
+                </a> -->
+
+                               <!--         <article>
+            <h3>Site de Barbearia</h3>
+            <img src="assets/imagens-projetos/barbearia.jpg" alt="Projeto Barbearia" class="projeto">
+        </article>
+
+        <article>
+            <h3>Conversor de Moedas</h3>
+            <img src="assets/imagens-projetos/conversor.jpg" alt="Projeto Conversor de Moedas" class="projeto">
+        </article>
+
+        <article>
+            <h3>Novo Projeto</h3>
+            <img src="assets/imagens-projetos/novo-projeto.jpg" alt="Novo Projeto" class="projeto">
+        </article>
+        </section> -->
+
+                <!-- Outros projetos fictícios podem ser adicionados aqui -->
+                        </div>
+                    </div>
+                </section>
+
+
+
+ 
+            <!-- Seção de apresentação -->
+            <section id="apresentacao">
+                <h2>Quem sou eu</h2>
+                <img src="https://media.licdn.com/dms/image/v2/C5603AQElPv6UXr4Cxg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613347006780?e=1777507200&v=beta&t=CIhqOoMMDIP0Occ7v-2Sl0qdkZFqIC6GfaawWEw9aOI"
+                    alt="Foto de Johnny" class="foto-johnny"> <!-- Sua foto -->
+                <h1>{JohnnyF.Dev} Desenvolvedor Front-End</h1>
+                <p>Olá, eu me chamo Johnny, sou desenvolvedor. Tenho 39 anos, uma linda família e amo o que eu faço, mexo
+                    com tecnologia desde 2001 e estou aqui para te ajudar a conquistar seus objetivos.</p>
+
+            </section>
+
+
+            </section>
+
+            <!-- Seção de depoimentos -->
+
+<section id="depoimentos">
+  <h2>Depoimentos</h2>
+  <div class="depoimentos-carousel">
+    <div class="depoimentos-track">
+      <div class="depoimento">
+        <img src="https://cdn.pixabay.com/photo/2020/01/24/08/43/redhead-4789668_1280.jpg" alt="Cliente feliz">
+        <blockquote>
+          "Johnny entregou meu site com rapidez e qualidade, recomendo!"
+        </blockquote>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <div class="depoimento">
+        <img src="https://cdn.pixabay.com/photo/2015/08/14/15/28/smiling-888532_1280.jpg" alt="Cliente feliz">
+        <blockquote>
+          "Profissional dedicado e criativo, trouxe soluções inovadoras."
+        </blockquote>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <div class="depoimento">
+        <img src="https://cdn.pixabay.com/photo/2023/12/21/06/23/middle-age-8461306_1280.jpg" alt="Cliente feliz">
+        <blockquote>
+          "Excelente comunicação e suporte durante todo o projeto."
+        </blockquote>
+        <div class="estrelas">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <!-- Seção de contato -->
+            <section id="contato">
+                <h2>Contato</h2>
+                <p>Entre em contato explicando sua situação para que eu possa te ajudar.</p>
+                <p>Ou clique no botão do Whatsapp e fale diretamente comigo.</p>
+                <form>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" autocomplete="off" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <section id="redes-sociais">
+  <h2>Minhas Redes</h2>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/johnnyf.dev/" target="_blank">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.ezM1Jj5cwNldL7-7pfV7CgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/johnny-ferreira-de-paula-236166201/" target="_blank">
+      <img src="https://th.bing.com/th/id/R.91587cfaaa734bd911942c567e4af1b9?rik=mYwLzGAzuNZD4Q&pid=ImgRaw&r=0" alt="LinkedIn">
+    </a>
+    <!-- <a href="https://facebook.com/seuusuario" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a> -->
+  </div>
+</section>
+<div id="contador">Visitas: 0</div>
+        <p>© 2026 Johnny - Todos os direitos reservados</p>
+
+    </footer>
+
+    <!-- Botão WhatsApp fixo -->
+    <a href="https://wa.me/5542998455688" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+    <!-- Importa o JS -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+<!--   
+      ██╗ ██████╗ 
+      ██║██╔═══██╗
+      ██║██║    ██║
+██    ██║██║   ██║
+╚█████╔╝╚██████╔╝
+ ╚════╝  ╚═════╝ 
+ JohnnyF. Dev
+ -->

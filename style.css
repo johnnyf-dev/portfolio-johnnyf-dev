@@ -1,0 +1,376 @@
+/* 
+Fluxograma da lógica do arquivo style.css
+------------------------------------------
+INÍCIO
+  |
+  |--> Reset de estilos básicos (*)
+  |
+  |--> Body (fundo preto, fonte terminal, responsividade)
+  |
+  |--> Canvas (efeito Matrix fixo atrás do conteúdo)
+  |
+  |--> Header (menu fixo 100% topo, espaçamento lateral, títulos compactos)
+  |
+  |--> Seções (portfolio, depoimentos, apresentação, contato)
+  |       |--> Carrossel de destaques (horizontal, imagens responsivas)
+  |       |--> Carrossel de depoimentos (horizontal, imagens + estrelas)
+  |
+  |--> Imagens (hover, responsivas, proporção correta)
+  |
+  |--> Formulário (labels brancos, inputs com autocomplete)
+  |
+  |--> Botão WhatsApp fixo (canto inferior direito)
+  |
+  |--> Footer (rodapé centralizado, assinatura)
+  |
+FIM
+*/
+
+/* Reset básico para padronizar estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+  background: black; /* Fundo preto */
+  color: #00ff00; /* Verde Matrix */
+  font-family: 'Courier New', Courier, monospace; /* Fonte estilo terminal */
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+
+        /* edições */
+  max-width: 100%;
+  overflow-x: hidden; /* bloqueia rolagem lateral */
+}
+html {
+  max-width: 100%;
+  overflow-x: hidden; /* bloqueia rolagem lateral */
+}
+
+/* Todas as imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajusta o espaço do conteúdo para não ficar escondido atrás do header */
+main {
+  margin-top: 120px; /* altura aproximada do header */
+}
+
+
+/* Canvas para efeito Matrix */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Mantém o canvas atrás do conteúdo */
+  background: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* ocupa toda a largura */
+  padding: 10px 20px;        /* leve espaçamento nas extremidades */
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;             /* fica acima do conteúdo */
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00ff00;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: nowrap; /* impede quebra de linha */
+}
+
+nav a {
+  color: white; /* Texto branco por padrão */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem; /* letras menores */
+  white-space: nowrap; /* força tudo na mesma linha */
+}
+
+nav a:hover {
+  color: #ffff00; /* Amarelo ao passar o mouse */
+}
+
+nav a:active {
+  color: #ffff00; /* Amarelo ao clicar */
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00ff00;
+}
+
+h2 {
+  text-align: center;
+}
+/* Imagens do portfólio */
+.projeto {
+  width: 250px;
+  border: 2px solid #00ff00;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.projeto:hover {
+  transform: scale(1.2); /* Aumenta ao passar o mouse */
+}
+
+
+/* Seção de depoimentos */
+#depoimentos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.depoimentos-carousel {
+  overflow: hidden;   /* esconde barra de rolagem */
+  width: 100%;
+  position: relative;
+}
+
+.depoimentos-track {
+  display: flex;      /* força em linha */
+  gap: 20px;
+}
+
+.depoimento {
+  flex: 0 0 auto;
+  width: 250px;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.depoimento img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.depoimento blockquote {
+  font-style: italic;
+  margin: 10px 0;
+  color: white;
+}
+
+.estrelas {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* Foto de Johnny */
+.foto-johnny {
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #00ff00;
+  margin-bottom: 20px;
+}
+
+/* Formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+form label {
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+form input, form textarea, form button {
+  padding: 10px;
+  border: 1px solid #00ff00;
+  background: black;
+  color: #00ff00;
+}
+
+form button {
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #00ff00;
+  color: black;
+}
+
+/* Botão WhatsApp fixo */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366; /* Verde oficial do WhatsApp */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #25D366;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ff00;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Assinatura */
+footer p:last-child {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Texto padrão da página */
+body {
+  background: black; /* Fundo preto */
+  color: white;      /* Todos os textos normais ficam brancos */
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: white; /* Títulos também brancos */
+  margin-left: 10px;
+}
+
+/* Labels do formulário */
+form label {
+  color: white; /* Labels brancos */
+}
+
+/* Rodapé */
+footer {
+  color: white; /* Texto do rodapé branco */
+}
+
+
+/* Seção Destaques */
+#destaques {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carousel {
+  overflow-x: scroll;   /* permite rolagem horizontal */
+  overflow-y: hidden;   /* bloqueia rolagem vertical */
+  overflow-x: hidden;   /* esconde a barra de rolagem */
+  position: relative;
+  width: 100%;
+  cursor: grab;
+  scroll-behavior: smooth;
+}
+
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-track a {
+  flex: 0 0 auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.carousel-track img {
+  width: 200px;
+  max-width: 250px; /* limite no desktop */
+  height: 200px;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-track p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* rodapé */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+#contador {
+  background-color: black;
+  color: limegreen;   /* verde estilo terminal */
+  font-family: monospace;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
+
+/*    
+      ██╗ ██████╗ 
+      ██║██╔═══██╗
+      ██║██║    ██║
+██    ██║██║   ██║
+╚█████╔╝╚██████╔╝
+ ╚════╝  ╚═════╝ 
+ JohnnyF. Dev */
