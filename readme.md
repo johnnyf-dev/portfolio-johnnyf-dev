@@ -1,133 +1,130 @@
-README — JohnnyF Dev -Portfolio
+# Portfólio JohnnyF Dev 💻✨
 
-🇧🇷 Versão em Português
+Este projeto é um portfólio interativo desenvolvido em **HTML, CSS e JavaScript**, com menus responsivos e seção de destaques. Ele serve como vitrine dos projetos criados e está pronto para deploy via **GitHub Pages**.
 
-✨ Sobre o Projeto
-Este projeto é um portfólio interativo desenvolvido com HTML, CSS e JavaScript, trazendo:
+---
 
-🎥 Efeito Matrix animado no fundo
+## 🚀 Funcionalidades
 
-🎨 Design mobile-first responsivo
+### Estrutura inicial
+- Seção **Destaques** com carrossel de projetos.
+- Links para páginas individuais de cada projeto:
+  - Salão de Beleza 💇‍♀️  
+  - Pet-Shop 🐶  
+  - Loja de Roupa 👕  
+  - Academia 🏋️  
+  - Restaurante 🍽️  
+  - Contabilidade 📊  
+  - Clínica de Estética 💆  
+  - Consultório Odontológico 🦷  
 
-🖼️ Carrossel infinito de destaques
+### Melhorias implementadas
+- **Menu sanduíche (hamburger)** ☰:
+  - Abre e fecha ao clicar no botão.
+  - Inclui opções: **Portfólio**, **Quem sou eu**, **Contato** e **Compartilhar**.
+  - O item **Portfólio** possui botão **+ / –** que expande/recolhe os projetos atuais.
+  - Ao clicar fora do menu ou em qualquer link, o menu fecha automaticamente.
 
-💬 Carrossel infinito de depoimentos com fotos e estrelas
+- **Menu fixo à direita** ➡️:
+  - Sempre visível no topo ao rolar a página.
+  - Opções: **Destaques**, **Depoimentos** e **Contato**.
+  - Removida a borda verde para visual mais limpo.
+  - Centralizado verticalmente com o botão do menu sanduíche.
 
-📱 Botão fixo do WhatsApp para contato rápido
+- **Compartilhar** 📲:
+  - Implementado com **Web Share API**.
+  - Funciona em dispositivos móveis (abre menu nativo de compartilhamento).
+  - Em navegadores desktop não suportados, exibe alerta.
 
-📝 Formulário com autocomplete para melhor experiência do usuário
+- **Submenu Portfólio**:
+  - Espaçamento entre itens reduzido em 50% para melhor compactação.
+  - Feedback visual com **+ / –** para expandir/recolher.
 
-🛠️ Tecnologias Utilizadas
-⚡ HTML5 — Estrutura semântica e organizada
+---
 
-🎨 CSS3 — Estilização responsiva, animações e layout mobile-first
+## 📂 Tecnologias utilizadas
+- **HTML5**  
+- **CSS3** (Flexbox, responsividade)  
+- **JavaScript (ES6)**  
 
-🧩 JavaScript (ES6+) — Interatividade, carrosséis infinitos e efeitos visuais
+---
 
-📱 Filosofia Mobile-First
-O projeto foi construído com foco em primeiro atender dispositivos móveis, garantindo:
+## 📦 Deploy
 
-✅ Layout compacto e adaptável
+O projeto está configurado para deploy via **GitHub Pages**.
 
-✅ Imagens responsivas (max-width: 100%)
+### Passo a passo:
+1. Faça commit das alterações:
+   ```bash
+   git add .
+   git commit -m "Update: menus responsivos, submenu Portfólio com toggle, melhorias visuais e função compartilhar"
+   git push
+No repositório, vá em Settings > Pages.
 
-✅ Menu fixo no topo ocupando 100% da tela
+Configure a branch principal (main ou master) como fonte.
 
-✅ Experiência fluida em smartphones e tablets
+O site ficará disponível em:
 
-🚀 Funcionalidades
-🌌 Canvas Matrix: fundo animado estilo terminal
+Código
+https://johnnyf-dev.github.io/portfolio-johnnyf-dev
+✅ Próximos passos sugeridos
+Melhorar feedback visual do submenu (usar setas ▼/▲ em vez de +/–).
 
-🖼️ Carrossel de Destaques: imagens interativas com hover
+Criar versão compacta só com texto para o submenu, economizando espaço.
 
-⭐ Carrossel de Depoimentos: fotos + avaliações 5 estrelas, rolando automaticamente
+Adicionar animações suaves na abertura/fechamento dos menus.
 
-📱 Botão WhatsApp fixo: contato direto e rápido
+Expandir seção de depoimentos com feedback real de clientes.
 
-📝 Formulário de contato: com suporte a autocomplete
-
-📋 Próximos Passos (Roadmap)
-🔗 Adicionar links para sites de portfólio reais (GitHub Pages, Vercel, Netlify)
-
-🎯 Criar seção de projetos detalhados com descrição e tecnologias usadas
-
-🧑‍💻 Implementar dark/light mode para acessibilidade
-
-🌍 Adicionar tradução multilíngue (PT/EN)
-
-🛡️ Melhorar SEO e acessibilidade (tags ARIA, meta tags avançadas)
-
-📊 Criar dashboard de estatísticas (visitas, contatos recebidos)
-
-👨‍💻 Autor
-JohnnyF Dev  
-💼 Desenvolvedor Front-End apaixonado por interatividade e design responsivo.
-📍 Ponta Grossa, Paraná — Brasil
-
-.................................................................................
-
-README — JohnnyF Dev Portfolio
-
-🇺🇸 English Version
-
-✨ About the Project
-This project is an interactive portfolio built with HTML, CSS, and JavaScript, featuring:
-
-🌌 Matrix effect animated background
-
-📱 Mobile‑first responsive design
-
-🖼️ Infinite carousel for highlights
-
-💬 Infinite carousel for testimonials with photos and stars
-
-📞 Fixed WhatsApp button for instant contact
-
-📝 Contact form with autocomplete for better user experience
-
-🛠️ Technologies Used
-⚡ HTML5 — Semantic and organized structure
-
-🎨 CSS3 — Responsive styling, animations, and mobile‑first layout
-
-🧩 JavaScript (ES6+) — Interactivity, infinite carousels, and visual effects
-
-📱 Mobile‑First Philosophy
-The project was designed with a mobile‑first approach, ensuring:
-
-✅ Compact and adaptable layout
-
-✅ Responsive images (max-width: 100%)
-
-✅ Fixed top navigation bar occupying 100% width
-
-✅ Smooth experience on smartphones and tablets
-
+🌍 English Version
 🚀 Features
-🌌 Canvas Matrix: animated background inspired by terminal aesthetics
+Hamburger menu ☰ with options: Portfolio, About Me, Contact, Share.
 
-🖼️ Highlights Carousel: interactive images with hover effects
+Portfolio submenu with toggle + / – to expand/collapse projects:
 
-⭐ Testimonials Carousel: photos + 5‑star ratings, auto‑scrolling infinitely
+Beauty Salon 💇‍♀️
 
-📞 WhatsApp button: fixed for quick contact
+Pet Shop 🐶
 
-📝 Contact form: with autocomplete support
+Clothing Store 👕
 
-📋 Roadmap / Next Steps
-🔗 Add links to real portfolio sites (GitHub Pages, Vercel, Netlify)
+Gym 🏋️
 
-🎯 Create a detailed projects section with descriptions and technologies used
+Restaurant 🍽️
 
-🧑‍💻 Implement dark/light mode for accessibility
+Accounting 📊
 
-🌍 Add multi‑language support (EN/PT)
+Aesthetic Clinic 💆
 
-🛡️ Improve SEO and accessibility (ARIA tags, advanced meta tags)
+Dental Office 🦷
 
-📊 Build a statistics dashboard (visits, contacts received)
+Fixed right menu ➡️ always visible at the top with: Highlights, Testimonials, Contact.
 
-👨‍💻 Author
-JohnnyF Dev  
-💼 Front‑End Developer passionate about interactivity and responsive design
-📍 Ponta Grossa, Paraná — Brazil
+Share button 📲 using Web Share API (works on mobile, alerts on desktop).
+
+Compact design: reduced spacing between portfolio items by 50%.
+
+🛠️ Tech Stack
+HTML5
+
+CSS3 (Flexbox, responsive design)
+
+JavaScript (ES6)
+
+📦 Deployment
+Hosted via GitHub Pages.
+
+Commit and push changes, then configure Pages in repository settings.
+
+Live at:
+
+Código
+https://johnnyf-dev.github.io/portfolio-johnnyf-dev
+✨ Next Steps
+Improve submenu feedback with arrows ▼/▲.
+
+Add animations for smoother transitions.
+
+Expand testimonials section with real client feedback.
+
+🔥🚀✨ With this README, your portfolio is fully documented, bilingual, and ready for deployment! 🎉💻🌍

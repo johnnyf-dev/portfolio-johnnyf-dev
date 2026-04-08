@@ -364,6 +364,109 @@ footer {
   margin-top: 20px;
 }
 
+/* Menu sanduíche à esquerda */
+.menu-esquerdo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: limegreen;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: black;
+  padding: 10px;
+  border: 1px solid limegreen;
+  margin-top: 10px;
+}
+
+.mobile-menu a {
+  color: limegreen;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+/* Submenu Portfólio */
+.expand-btn {
+  background: none;
+  border: none;
+  color: limegreen;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* ============================================== */
+/* Submenu Portfólio */
+.submenu {
+  display: none;
+  flex-direction: column;
+  margin-left: 15px;
+  background: #111;
+  padding: 2px; /* antes estava 10px */
+}
+
+.submenu li {
+  margin: 2px 0; /* antes estava ~8px */
+}
+
+.submenu a {
+  display: flex;
+  align-items: center;
+  gap: 3px; /* antes estava 10px */
+  color: limegreen;
+  text-decoration: none;
+  font-size: 0.95rem; /* opcional: deixa o texto um pouco menor */
+}
+
+.submenu img {
+  width: 10px; /* antes 40px */
+  height: 10px;
+  object-fit: cover;
+  border: 1px solid limegreen;
+  border-radius: 4px;
+}
+
+
+
+/* ===================================================== */
+
+/* Menu fixo à direita */
+.menu-direito {
+  position: fixed;
+  top: 10px;              /* mesmo topo do botão sanduíche */
+  right: 10px;
+  background: black;
+  padding: 10px;
+  /* removemos a borda verde */
+  border: none;
+  z-index: 1000;
+}
+
+.menu-direito ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.menu-direito a {
+  color: limegreen;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 
 
 /*    

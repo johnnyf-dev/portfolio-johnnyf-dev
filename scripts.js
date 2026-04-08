@@ -230,6 +230,87 @@ fetch('https://api.countapi.xyz/hit/johnnyf/portfolio')
   })
   .catch(err => console.error("Erro no contador:", err));
 
+/* ======================================================= */
+
+// Toggle menu sanduíche
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+});
+
+// Expandir/Recolher Portfólio com troca de símbolo
+const expandBtn = document.getElementById("expandPortfolio");
+const portfolioSubmenu = document.getElementById("portfolioSubmenu");
+
+expandBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (portfolioSubmenu.style.display === "flex") {
+    portfolioSubmenu.style.display = "none";
+    expandBtn.textContent = "+"; // volta para +
+  } else {
+    portfolioSubmenu.style.display = "flex";
+    expandBtn.textContent = "−"; // muda para -
+  }
+});
+
+
+
+// Fechar menu ao clicar fora
+document.addEventListener("click", (event) => {
+  if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+    mobileMenu.style.display = "none";
+    portfolioSubmenu.style.display = "none";
+  }
+});
+
+
+// Fechar menu ao clicar em link (exceto Portfólio)
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", (event) => {
+    // Se o link NÃO for o "Portfólio", fecha o menu
+    if (event.target.id !== "portfolioLink") {
+      mobileMenu.style.display = "none";
+      portfolioSubmenu.style.display = "none";
+    }
+  });
+});
+
+// Tornar o link "Portfólio" também um gatilho para expandir
+const portfolioLink = document.getElementById("portfolioLink");
+portfolioLink.addEventListener("click", (event) => {
+  event.preventDefault();   // não rola a página
+  event.stopPropagation();  // não fecha o menu
+  portfolioSubmenu.style.display = portfolioSubmenu.style.display === "flex" ? "none" : "flex";
+});
+
+
+
+
+/* ==================================================== */
+
+// Compartilhar (Web Share API)
+function sharePortfolio() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Portfólio JohnnyF Dev',
+      text: 'Confira meu portfólio online!',
+      url: window.location.href
+    }).catch(err => console.error("Erro ao compartilhar:", err));
+  } else {
+    alert("Compartilhamento não suportado neste navegador.");
+  }
+}
+
+document.getElementById("shareBtn").addEventListener("click", (event) => {
+  event.preventDefault();
+  sharePortfolio();
+});
+
+
 
 // =========================
 // Assinatura
