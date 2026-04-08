@@ -221,15 +221,14 @@ depoimentosCarousel.addEventListener("mouseup", () => setTimeout(startDepoimento
 depoimentosCarousel.addEventListener("touchend", () => setTimeout(startDepoimentosScroll, 3000));
 
 
-// Contador de visitas usando CountAPI
-// "johnnyf/portfolio" é a chave única (namespace/key)
+
+// Cada atualização soma +1 no contador global
 fetch('https://api.countapi.xyz/hit/johnnyf/portfolio')
   .then(res => res.json())
   .then(res => {
     document.getElementById("contador").innerText = "Visitas: " + res.value;
   })
   .catch(err => console.error("Erro no contador:", err));
-
 
 
 // =========================
