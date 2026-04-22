@@ -466,6 +466,13 @@ footer {
   font-weight: bold;
 }
 
+.carousel-track img {
+  border: 1px solid #eee;   /* borda clara e discreta */
+  border-radius: 6px;       /* cantos levemente arredondados */
+  padding: 2px;             /* pequeno espaço entre imagem e borda */
+  background-color: #222;   /* fundo escuro da página */
+}
+
 
 
 
