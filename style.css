@@ -387,7 +387,8 @@ footer {
 }
 
 .mobile-menu {
-  display: flex;
+  display: none;   /* escondido por padrão */
+  /* display: flex; */
   flex-direction: column;
   background: black;
   padding: 10px;
@@ -398,10 +399,14 @@ footer {
   list-style: none;
   align-items: center;       /* centraliza verticalmente */
   justify-content: space-between; /* texto à esquerda, botão à direita (quando existir) */
+
+  width: 100%;                /* ocupa toda a largura */
+  align-items: center;
 }
 
 .mobile-menu li {
   list-style: none;
+  align-items: center;
 
   border-bottom: 1px solid #ccc; /* linha fina em toda a largura */
   padding: 0; /* evita que a linha fique curta */
@@ -475,26 +480,46 @@ footer {
   border: 1px solid #ccc;
   border-radius: 6px;
 
-  width: 100%;              /* ocupa toda a largura do item */
+  
+  width: 100%;              /* largura menor que o menu */
+  margin: 10px auto;       /* centraliza horizontalmente */
 
+/* centraliza verticalmente */
+  justify-content: center;
+  align-items: stretch; /* cada link ocupa toda a largura da caixa */
+
+}
+
+
+.submenu.open {
+  display: flex;
 }
 
 .submenu li {
-  padding: 6px 0;
+  padding: 20px 0 1px 0;
   border-bottom: 1px solid #333;
+  align-items: center;
 }
 
 .submenu li:last-child {
-  border-bottom: none;
+  border-bottom: none; /* remove a linha do último item */
 }
 
+
 .submenu a {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 3px; /* antes estava 10px */
   color: limegreen;
   text-decoration: none;
   font-size: 0.95rem; /* opcional: deixa o texto um pouco menor */
+
+  display: block;          /* ocupa toda a largura disponível */
+  text-align: left;        /* texto alinhado à esquerda */
+  height: 16.5px;              /* altura da linha */
+  line-height: 0px;         /* centraliza verticalmente o texto */
+  padding: 0 10px;           /* espaçamento lateral */
+  
 }
 
 .submenu img {
@@ -536,11 +561,30 @@ footer {
 }
 
 .carousel-track img {
-  border: 1px solid #eee;   /* borda clara e discreta */
+  border: 2px solid #eee;   /* borda clara e discreta */
   border-radius: 6px;       /* cantos levemente arredondados */
   padding: 2px;             /* pequeno espaço entre imagem e borda */
   background-color: #222;   /* fundo escuro da página */
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;   /* distância da borda inferior */
+  right: 20px;    /* distância da borda direita */
+  z-index: 1000;  /* fica acima dos outros elementos */
+}
+
+.whatsapp-float img {
+  width: 60px;    /* tamanho do ícone */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1); /* efeito ao passar o mouse */
+}
+
 
 
 

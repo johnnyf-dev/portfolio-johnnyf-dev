@@ -286,17 +286,24 @@ portfolioLink.addEventListener("click", (event) => {
   event.stopPropagation();  // não fecha o menu global
 
 function togglePortfolioSubmenu(event) {
-  event.preventDefault();
-  event.stopPropagation();
+  event.preventDefault();       // impede o comportamento padrão do link
+  event.stopPropagation();      // evita propagação
 
-  if (portfolioSubmenu.style.display === "flex") {
-    portfolioSubmenu.style.display = "none";
-    expandBtn.textContent = "+"; // volta para +
+  const isOpen = portfolioSubmenu.classList.contains("open");
+
+  if (isOpen) {
+    portfolioSubmenu.classList.remove("open");
+    expandBtn.textContent = "+";
   } else {
-    portfolioSubmenu.style.display = "flex";
-    expandBtn.textContent = "−"; // muda para -
+    portfolioSubmenu.classList.add("open");
+    expandBtn.textContent = "−";
   }
 }
+
+// aplica nos dois
+expandBtn.addEventListener("click", togglePortfolioSubmenu);
+portfolioLink.addEventListener("click", togglePortfolioSubmenu);
+
 
 // Botão +
 expandBtn.addEventListener("click", togglePortfolioSubmenu);
