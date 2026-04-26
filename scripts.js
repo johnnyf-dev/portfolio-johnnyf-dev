@@ -283,10 +283,36 @@ mobileMenu.querySelectorAll("a").forEach(link => {
 const portfolioLink = document.getElementById("portfolioLink");
 portfolioLink.addEventListener("click", (event) => {
   event.preventDefault();   // não rola a página
-  event.stopPropagation();  // não fecha o menu
-  portfolioSubmenu.style.display = portfolioSubmenu.style.display === "flex" ? "none" : "flex";
+  event.stopPropagation();  // não fecha o menu global
+
+function togglePortfolioSubmenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (portfolioSubmenu.style.display === "flex") {
+    portfolioSubmenu.style.display = "none";
+    expandBtn.textContent = "+"; // volta para +
+  } else {
+    portfolioSubmenu.style.display = "flex";
+    expandBtn.textContent = "−"; // muda para -
+  }
+}
+
+// Botão +
+expandBtn.addEventListener("click", togglePortfolioSubmenu);
+
+// Link Portfólio
+portfolioLink.addEventListener("click", togglePortfolioSubmenu);
+
+
+
+  // Mostra só o submenu
+  portfolioSubmenu.style.display = 
+    portfolioSubmenu.style.display === "flex" ? "none" : "flex";
 });
 
+/* ao abrir o submenu o menu principal feche */
+/* mobileMenu.style.display = "none"; */
 
 
 

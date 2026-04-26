@@ -370,6 +370,12 @@ footer {
   top: 10px;
   left: 10px;
   z-index: 1000;
+  
+}
+
+.menu-sanduiche .submenu li {
+  border-bottom: 1px solid #ccc; /* linha clara e discreta */
+  padding: 6px 0;
 }
 
 .hamburger {
@@ -381,19 +387,48 @@ footer {
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   background: black;
   padding: 10px;
-  border: 1px solid limegreen;
+  border: 3px solid #fff;    /* borda branca espessa ao redor de todo o menu */
+  border-radius: 8px;
   margin-top: 10px;
+
+  list-style: none;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: space-between; /* texto à esquerda, botão à direita (quando existir) */
+}
+
+.mobile-menu li {
+  list-style: none;
+
+  border-bottom: 1px solid #ccc; /* linha fina em toda a largura */
+  padding: 0; /* evita que a linha fique curta */
+}
+
+.mobile-menu li:not(:last-child) {
+  border-bottom: 1px solid #ccc; /* linha fina entre os itens */
+},
+
+/* Cabeçalho do Portfólio (texto + botão) */
+.portfolio-header {
+  display: flex;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: space-between; /* texto à esquerda, botão à direita */
+  padding: 10px;             /* espaço interno */
+  width: 100%;
 }
 
 .mobile-menu a {
   color: limegreen;
   text-decoration: none;
-  padding: 8px 0;
+ /*  padding: 10px;
+  display: block; */
+
+  flex: 1;                   /* ocupa espaço disponível */
 }
+
 
 /* Submenu Portfólio */
 .expand-btn {
@@ -402,7 +437,29 @@ footer {
   color: limegreen;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 10px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;   /* empilha link/btn e submenu */
+  align-items: flex-start;  /* alinha à esquerda */
+  /* justify-content: space-between; */ /* texto à esquerda, + à direita */
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* linha fina separando */
+}
+
+.portfolio-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.portfolio-item a {
+  flex: 1;                    /* ocupa espaço disponível */
+  color: limegreen;
+  text-decoration: none;
 }
 
 /* ============================================== */
@@ -412,11 +469,23 @@ footer {
   flex-direction: column;
   margin-left: 15px;
   background: #111;
-  padding: 2px; /* antes estava 10px */
+  padding: 5px; /* antes estava 10px */
+  
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  width: 100%;              /* ocupa toda a largura do item */
+
 }
 
 .submenu li {
-  margin: 2px 0; /* antes estava ~8px */
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
 }
 
 .submenu a {
